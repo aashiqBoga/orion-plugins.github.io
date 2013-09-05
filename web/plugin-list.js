@@ -5,8 +5,13 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 		return JSON.parse(str);
 	}
 
+	var RepoWebURL = 'https://orion-plugins.googlecode.com/git/';
+
+	var TARGET = 'target',
+	    VERSION = 'version',
+	    ORION_HOME = 'OrionHome';
+
 	var pluginsData = json(plugins).plugins;
-	var TARGET = 'target', VERSION = 'version', ORION_HOME = 'OrionHome';
 
 	(function() {
 		// Turn 'pluginsData' JSON structure into objects with behavior.
@@ -19,24 +24,32 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 			}
 			Plugin.prototype = {
 				getDescription: function() { return this.description; },
+				getURL: function() { return this.url; },
 				getInstallURL: function(version, target, orionHome) {
 					var ver = this.getVersion(version);
-					var url = (ver && ver[0]) || null;
-					if (this.orionHome && url) {
-						if (orionHome) {
-							url = new URITemplate(url).expand({
-								OrionHome: orionHome
-							});
-							url = decodeURIComponent(url); // i don't know
-						} else {
-							url = null; // no OrionHome param passed; can't install this
-						}
+					var url = (ver && ver.url) || null;
+					if (!url) {
+						return null;
 					}
-					return url;
+					if (this.orionHome) {
+						if (orionHome) {
+							// no OrionHome param passed; can't install this
+							return null;
+						}
+						url = new URITemplate(url).expand({
+							OrionHome: orionHome,
+							RepoWebURL: RepoWebURL
+						});
+						return decodeURIComponent(url); // i don't know
+					}
+					return decodeURIComponent(			// why do i need this??!
+						new URITemplate(url).expand({
+							RepoWebURL: RepoWebURL
+					}));
 				},
 				getSourceURL: function(version) {
 					var ver = this.getVersion(version);
-					return (ver && ver[1]) || null;
+					return (ver && ver.sourceURL) || null;
 				},
 				getName: function() { return this.name; },
 				getVersion: function(versionId) {
@@ -75,13 +88,6 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 						return false;
 					});
 					return version || null;
-//					for (var i=0; i < keys.length; i++) {
-//						var ver = keys[i];
-//						if (ver.split('|').indexOf(versionId) !== -1) {
-//							return versions[ver];
-//						}
-//					}
-//					return null;
 				},
 				getVersionIds: function() {
 					return Object.keys(this.versions);
@@ -170,12 +176,9 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 					}
 				} else {
 					if (pluginVersion) {
-						var installURL = plugin.getInstallURL(versionId), sourceURL = plugin.getSourceURL(versionId);
+						var installURL = plugin.getInstallURL(versionId);
 						if (installURL) {
-							html = '<div class="pluginURL"><a href="' + installURL + '">Plugin</a></div>';
-						}
-						if (sourceURL) {
-							html += '<div class="pluginSource"><a href="' + sourceURL + '">Source</a></div>';
+							html = '<div class="pluginURL"><a href="' + installURL + '">URL</a></div>';
 						}
 					} else {
 						html = '&ndash;';
@@ -194,8 +197,24 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 				var plugin = plugins[i];
 				var row = table.insertRow(-1);
 				var desc = row.insertCell(-1);
-				desc.innerHTML = '<div class="pluginName">' + plugin.getName() + '</div>' + 
-						'<div class="pluginDesc">' + plugin.getDescription() + '</div>';
+
+				var name = document.createElement('div');
+				name.className = 'pluginName';
+				if (plugin.getURL()) {
+					var namelink = document.createElement('a');
+					namelink.href = plugin.getURL();
+					namelink.textContent = plugin.getName();
+					name.appendChild(namelink);
+				} else {
+					name.appendChild(document.createTextNode(plugin.getName()));
+				}
+				desc.appendChild(name);
+
+				var description = document.createElement('div');
+				description.className = 'pluginDesc';
+				description.innerHTML = plugin.getDescription();
+				desc.appendChild(description);
+
 				var cell, versionId;
 				if (params[VERSION]) {
 					cell = row.insertCell(-1);
