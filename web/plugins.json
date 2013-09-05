@@ -49,8 +49,11 @@
 			"description": "Uses <a href=\"http://codemirror.net/\">CodeMirror</a> modes to highlight your code.",
 			"experimental": true,
 			"versions": {
-				">=1.0": {
-					"url": "http://mamacdon.github.io/orion-codemirror/codeMirrorPlugin.html"
+				"<4.0": {
+					"url": "{RepoURL}1.0/plugins/orion-codemirror/codeMirrorPlugin.html"
+				},
+				">=4.0": {
+					"url": "https://orion-codemirror.googlecode.com/git-history/gh-pages/codeMirrorPlugin.html"
 				}
 			}
 		},
