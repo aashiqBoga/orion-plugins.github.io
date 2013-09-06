@@ -32,7 +32,7 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 						return null;
 					}
 					if (this.orionHome) {
-						if (orionHome) {
+						if (!orionHome) {
 							// no OrionHome param passed; can't install this
 							return null;
 						}
