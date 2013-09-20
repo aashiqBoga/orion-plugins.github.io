@@ -159,7 +159,7 @@
 		},
 		{	"name": "Line Delimiter Converter",
 			"description": "This plugin provides a editor commands to convert line delimiters to DOS or UNIX.",
-			"url": "https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.ui/web/plugins/delimiterPlugin.js",
+			"url": "https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.ui/web/plugins/delimiterPlugin.html",
 			"orionHome": true,
 			"versions": {
 				">2.0": {
