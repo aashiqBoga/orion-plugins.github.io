@@ -153,7 +153,7 @@
 			"orionHome": false,
 			"versions": {
 				">=2.0": {
-					"url": "http://kenwalker.github.io/Double2Single/Double2Single.html"
+					"url": "https://double2single.googlecode.com/git/Double2Single.html"
 				}
 			}
 		},
