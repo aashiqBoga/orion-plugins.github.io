@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="jsbeautify.js"></script>
 	<script type="text/javascript">
 	/*jslint onevar: false, plusplus: false */
-
+	/*global eclipse js_beautify console*/
 
 
 	// The following registers the JS Beautifier with the Orion text editor:
@@ -52,6 +52,9 @@
 			contentType: ["application/javascript", "text/html", "application/json"],
 			pid: "jsbeautify.config"
 		});
+
+		var PREF_VALUE_4_SPACES = '{"indent_size": 4, "indent_char": "\\u0020"}',
+		    PREF_VALUE_1_TAB    = '{"indent_size": 1, "indent_char": "\\t"}';
 		provider.registerServiceProvider("orion.core.setting", {}, {
 			settings: [{
 				pid: 'jsbeautify.config',
@@ -61,14 +64,14 @@
 				properties: [{
 					id: 'indent_style',
 					name: 'Indent Style',
-					defaultValue: 1,
+					defaultValue: PREF_VALUE_4_SPACES,
 					options: [{
 						label: "1 Tab",
-						value: '{"indent_size": 1, "indent_char": "\\t"}'
+						value: PREF_VALUE_1_TAB
 					}, {
 						label: "4 Spaces",
 						// Make sure the space character stay a space character.
-						value: '{"indent_size": 4, "indent_char": "\\u0020"}'
+						value: PREF_VALUE_4_SPACES
 					}],
 					type: 'string'
 				}]
