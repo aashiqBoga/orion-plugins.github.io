@@ -26,16 +26,6 @@
 				}
 			}
 		},
-		{	"name": "JavaScript outliner",
-			"description": "Provides a simple tree view of the functions in a JavaScript file.",
-			"url": "https://github.com/mamacdon/outliner",
-			"experimental": true,
-			"versions": {
-				">=1.0": {
-					"url": "https://outliner.googlecode.com/git/outlinerPlugin.html"
-				}
-			}
-		},
 		{	"name": "Nonymous outline",
 			"description": "Provides a tree view of JavaScript functions using the \"Function-Object Consumption\" algorithm to generate meaningful names for anonymous functions.",
 			"experimental": true,
@@ -62,23 +52,6 @@
 			"versions": {
 				">=0.5": {
 					"url": "http://jarthorn.github.io/html-tools/htmlOutlinePlugin.html"
-				}
-			}
-		},
-		{	"name": "Esprima outline",
-			"description": "Uses the <a href=\"http://esprima.org\">esprima</a> JavaScript parser to provide a detailed outline of your JavaScript code.",
-			"versions": {
-				">=0.5": {
-					"url": "http://aclement.github.io/esprima-outline/esprimaOutlinerPlugin.html"
-				}
-			}
-		},
-		{
-			"name": "Esprima content assist",
-			"description": "Offers completion and type inference for JavaScript files. (Comes included with Orion 1.0+)",
-			"versions": {
-				"0.5": {
-					"url": "{RepoWebURL}0.5/plugins/esprimaContentAssist/esprimaJsContentAssistPlugin.html"
 				}
 			}
 		},
