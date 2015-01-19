@@ -5,10 +5,12 @@
     <title>Shell 'echo' Plugin</title>
     <script src="plugin.js"></script>
     <script>
+        /*eslint-env browser*/
+        /*global eclipse*/
         window.onload = function() {
             var serviceProperties = { 
                 name: "echo",
-                description: "Echo a string and also <em>hack you</em>",
+                description: "Attempts to inject JS code into page.",
                 manual: "This is an example implementation...",
                 parameters: [{
                     name: "string",
