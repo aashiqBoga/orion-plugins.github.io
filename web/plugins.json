@@ -43,7 +43,7 @@
 					"url": "{RepoURL}1.0/plugins/orion-codemirror/codeMirrorPlugin.html"
 				},
 				">=4.0": {
-					"url": "https://orion-codemirror.googlecode.com/git/codeMirrorPlugin.html"
+					"url": "https://mamacdon.github.io/orion-codemirror/codeMirrorPlugin.html"
 				}
 			}
 		},
@@ -126,7 +126,7 @@
 			"orionHome": false,
 			"versions": {
 				">=2.0": {
-					"url": "https://double2single.googlecode.com/git/Double2Single.html"
+					"url": "http://kenwalker.github.io/Double2Single/Double2Single.html"
 				}
 			}
 		},
