@@ -2,7 +2,7 @@ Orion sample plugins
 ====================
 This repo contains some example plugins and tools for [Eclipse Orion](http://wiki.eclipse.org/Orion).
 
-## Go to [https://orion-plugins.github.io/](orion-plugins.github.io).
+## Go to [orion-plugins.github.io](https://orion-plugins.github.io/).
 
 See also:
 
