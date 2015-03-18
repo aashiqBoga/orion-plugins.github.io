@@ -5,7 +5,7 @@ define(['orion/URITemplate', 'text!plugins.json', 'domReady!'], function(URITemp
 		return JSON.parse(str);
 	}
 
-	var RepoWebURL = 'https://orion-plugins.googlecode.com/git/';
+	var RepoWebURL = 'https://orion-plugins.github.io';
 
 	var TARGET = 'target',
 	    VERSION = 'version',
