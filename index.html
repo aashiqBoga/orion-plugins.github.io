@@ -8,7 +8,8 @@
 		<script>
 			// To avoid mixed-content problems, client-side redirect to https
 			/*eslint-env browser*/
-			if (window.location.protocol === "http:") {
+			var loc = window.location;
+			if (loc.protocol === "http:" && loc.host === "orion-plugins.github.io") {
 				window.location.protocol = "https";
 			}
 		</script>
