@@ -5,16 +5,16 @@
 			"url": "https://github.com/mamacdon/mamacdon.github.com/tree/master/0.5/beautify",
 			"versions": {
 				">=1.0": {
-					"url": "{RepoWebURL}0.5/plugins/beautify/jsbeautify.html"
+					"url": "{RepoWebURL}/0.5/plugins/beautify/jsbeautify.html"
 				}
 			}
 		},
 		{	"name": "Uglify",
 			"description": "Minifies your JavaScript code using <a href=\"https://github.com/mishoo/UglifyJS\">uglify-js</a>.",
-			"url": "{RepoWebURL}0.5/plugins/uglify",
+			"url": "{RepoWebURL}/0.5/plugins/uglify",
 			"versions": {
 				">=0.5": {
-					"url": "{RepoWebURL}0.5/plugins/uglify/uglify-plugin.html"
+					"url": "{RepoWebURL}/0.5/plugins/uglify/uglify-plugin.html"
 				}
 			}
 		},
@@ -22,7 +22,7 @@
 			"description": "A <a href=\"http://dev.eclipse.org/mhonarc/lists/orion-dev/msg00688.html\">Bugzilla integration</a> plugin for Orion.",
 			"versions": {
 				">=0.5": {
-					"url": "{RepoWebURL}0.3/plugins/bugzilla/plugin.html"
+					"url": "{RepoWebURL}/0.3/plugins/bugzilla/plugin.html"
 				}
 			}
 		},
