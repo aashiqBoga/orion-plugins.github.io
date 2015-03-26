@@ -31,7 +31,7 @@
 			"experimental": true,
 			"versions": {
 				">=0.5": {
-					"url": "http://johnjbarton.github.io/outliner/nonymousPlugin.html"
+					"url": "https://johnjbarton.github.io/outliner/nonymousPlugin.html"
 				}
 			}
 		},
@@ -51,7 +51,7 @@
 			"description": "Provides a hierarchical outline of the elements in an HTML file.",
 			"versions": {
 				">=0.5": {
-					"url": "http://jarthorn.github.io/html-tools/htmlOutlinePlugin.html"
+					"url": "https://jarthorn.github.io/html-tools/htmlOutlinePlugin.html"
 				}
 			}
 		},
@@ -86,7 +86,7 @@
 			"url": "https://github.com/sfmccourt/sfmccourt.github.com/blob/master/plugins/pixlr/pixlrPlugin.html",
 			"versions": {
 				">=0.5": {
-					"url": "http://sfmccourt.github.io/plugins/pixlr/pixlrPlugin.html"
+					"url": "https://sfmccourt.github.io/plugins/pixlr/pixlrPlugin.html"
 				}
 			}
 		},
@@ -126,7 +126,7 @@
 			"orionHome": false,
 			"versions": {
 				">=2.0": {
-					"url": "http://kenwalker.github.io/Double2Single/Double2Single.html"
+					"url": "https://kenwalker.github.io/Double2Single/Double2Single.html"
 				}
 			}
 		},
