@@ -2,16 +2,16 @@
 	"plugins": [
 		{	"name": "JS Beautify",
 			"description": "Cleans up the formatting of your JavaScript code using <a href=\"http://jsbeautifier.org/\">jsbeautifier</a>.",
-			"url": "https://github.com/mamacdon/mamacdon.github.com/tree/master/0.5/beautify",
+			"url": "https://github.com/orion-plugins/orion-plugins.github.io/tree/master/0.5/plugins/beautify",
 			"versions": {
-				">=1.0": {
+				">=0.5": {
 					"url": "{RepoWebURL}/0.5/plugins/beautify/jsbeautify.html"
 				}
 			}
 		},
 		{	"name": "Uglify",
 			"description": "Minifies your JavaScript code using <a href=\"https://github.com/mishoo/UglifyJS\">uglify-js</a>.",
-			"url": "{RepoWebURL}/0.5/plugins/uglify",
+			"url": "https://github.com/orion-plugins/orion-plugins.github.io/tree/master/0.5/plugins/uglify",
 			"versions": {
 				">=0.5": {
 					"url": "{RepoWebURL}/0.5/plugins/uglify/uglify-plugin.html"
@@ -40,7 +40,7 @@
 			"experimental": true,
 			"versions": {
 				"<4.0": {
-					"url": "{RepoURL}1.0/plugins/orion-codemirror/codeMirrorPlugin.html"
+					"url": "{RepoURL}/1.0/plugins/orion-codemirror/codeMirrorPlugin.html"
 				},
 				">=4.0": {
 					"url": "https://mamacdon.github.io/orion-codemirror/codeMirrorPlugin.html"
